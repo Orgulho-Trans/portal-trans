@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Trans & LGBT+ — Acolhimento e Informação</title>
+    <!-- Custom CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="modo-pride">
+
+    <!-- COLOR MODE SELECTION BAR -->
+    <div class="modo-botoes">
+        <button class="modo-botao modo-botao-pride ativo" onclick="mudarModo('pride')">
+            🌈 Pride
+        </button>
+        <button class="modo-botao modo-botao-trans" onclick="mudarModo('trans')">
+            🏳️‍⚧️ Trans
+        </button>
+        <button class="modo-botao modo-botao-escuro" onclick="mudarModo('escuro')">
+            🌙 Escuro
+        </button>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header>
+        <div class="container">
+            <h1>Portal Trans & LGBT+</h1>
+            <p>Um espaço seguro, informativo e cheio de amor 🏳️‍⚧️ 🏳️‍🌈</p>
+            
+            <!-- CENTRALIZED NAVIGATION LINKS -->
+            <div class="nav-links">
+                <a href="#sobre" class="nav-link">Sobre</a>
+                <a href="#educacao" class="nav-link">Educação</a>
+                <a href="#recursos" class="nav-link">Rede de Apoio</a>
+                <a href="#inspiracao" class="nav-link">Inspiração</a>
+                <a href="#alexia" class="nav-link">Alexia</a>
+                <a href="#curtidas" class="nav-link">Apoiar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PAGE CONTENT -->
+    <main class="container">
+        
+        <!-- SECTION 1: ABOUT -->
+        <section id="sobre" class="fade-in">
+            <h2>🏳️‍🌈 Sobre o Portal</h2>
+            <p>Este portal foi criado para acolher, orientar e celebrar pessoas Trans, Travestis, Crossdressers, Não-bináries e toda a comunidade LGBTQIA+. Aqui você encontra informação verdadeira, apoio, cultura e histórias que inspiram.</p>
+            <p style="margin-top: 1rem;">Nosso objetivo é promover visibilidade, respeito e direitos para todas as identidades de gênero e orientações sexuais.</p>
+        </section>
+
+        <!-- SECTION 2: EDUCATION -->
+        <section id="educacao" class="fade-in">
+            <h2>📚 Educação & Informação</h2>
+            <p style="margin-bottom: 1.5rem;">Conhecimento transforma vidas. Clique nos cartões abaixo para entender melhor as diversas identidades e conceitos da nossa comunidade.</p>
+            
+            <!-- Grid of Interactive Education Cards (Grayscale to Color Reveal on Hover) -->
+            <div class="education-grid">
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('trans')">
+                    <i>🏳️‍⚧️</i>
+                    <span>Transgênero</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('mulher-trans')">
+                    <i>👩‍⚧️</i>
+                    <span>Mulher Trans</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('homem-trans')">
+                    <i>👨‍⚧️</i>
+                    <span>Homem Trans</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('nao-binario')">
+                    <i>💛</i>
+                    <span>Não-Binário</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('cis')">
+                    <i>👤</i>
+                    <span>Cisgênero</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('lesbicas')">
+                    <i>👩‍❤️‍👩</i>
+                    <span>Lésbicas</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('crossdresser')">
+                    <i>👗</i>
+                    <span>Crossdresser</span>
+                </div>
+                <div class="education-card reveal-hover-card" onclick="mostrarExplicacao('dragqueen')">
+                    <i>👑</i>
+                    <span>Drag Queens</span>
+                </div>
+            </div>
+
+            <!-- Dynamic Explanations Panels -->
+            <div id="explicacao-trans" class="explanation-content active">
+                <h3>O que é ser Transgênero? 🏳️‍⚧️</h3>
+                <p>Pessoas transgênero são aquelas cuja identidade de gênero difere do sexo atribuído no nascimento. É um termo guarda-chuva que abrange diversas identidades e formas de expressão.</p>
+            </div>
+
+            <div id="explicacao-mulher-trans" class="explanation-content">
+                <h3>Mulher Trans 👩‍⚧️</h3>
+                <p>Uma mulher que foi designada como do sexo masculino ao nascer, mas que se identifica e vive como mulher. Sua identidade de gênero é feminina e deve ser sempre respeitada.</p>
+            </div>
+
+            <div id="explicacao-homem-trans" class="explanation-content">
+                <h3>Homem Trans 👨‍⚧️</h3>
+                <p>Um homem que foi designado como do sexo feminino ao nascer, mas que se identifica e vive como homem. Sua identidade de gênero é masculina.</p>
+            </div>
+
+            <div id="explicacao-nao-binario" class="explanation-content">
+                <h3>Não-Binário 💛</h3>
+                <p>Pessoas que não se identificam exclusivamente como homem ou mulher. Podem se sentir como ambos, nenhum, ou transitar entre os gêneros de forma livre e fluida.</p>
+            </div>
+
+            <div id="explicacao-cis" class="explanation-content">
+                <h3>Cisgênero 👤</h3>
+                <p>Pessoas cuja identidade de gênero está em perfeita concordância com o sexo biológico atribuído no momento do nascimento. É o oposto de transgênero.</p>
+            </div>
+
+            <div id="explicacao-lesbicas" class="explanation-content">
+                <h3>Lésbicas 👩‍❤️‍👩</h3>
+                <p>Mulheres (cis ou trans) que sentem atração afetiva e/ou sexual por outras mulheres. É uma orientação sexual e afetiva, não uma identidade de gênero.</p>
+            </div>
+
+            <div id="explicacao-crossdresser" class="explanation-content">
+                <h3>Crossdresser 👗</h3>
+                <p>Pessoas que vestem roupas associadas ao gênero oposto ao seu, geralmente por prazer estético, conforto ou expressão pessoal, sem necessariamente desejar uma transição de gênero médica ou social permanente.</p>
+            </div>
+
+            <div id="explicacao-dragqueen" class="explanation-content">
+                <h3>Drag Queens 👑</h3>
+                <p>Artistas que se vestem e performam de forma teatral, artística e estilizada o gênero feminino para fins de entretenimento, espetáculo e rica expressão política e cultural.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SUPPORT NETWORKS -->
+        <section id="recursos" class="fade-in">
+            <h2>🛡️ Rede de Apoio</h2>
+            
+            <div class="resource-card reveal-hover-card">
+                <div class="resource-icon">Coleção 💜</div>
+                <h3>Mães pela Diversidade</h3>
+                <p>Tire seu preconceito do caminho que vamos passar com nosso amor. Coletivo fundamental que oferece acolhimento a famílias e indivíduos LGBT+.</p>
+                <a href="https://www.facebook.com/MaespelaDiversidade/" target="_blank" class="resource-link">→ Mães pela Diversidade (Facebook)</a>
+            </div>
+            
+            <div class="resource-card reveal-hover-card">
+                <div class="resource-icon">Parcerias 🤝</div>
+                <h3>Redes de Apoio LGBTQIA+</h3>
+                <p>Plataformas nacionais que oferecem suporte psicossocial, orientação jurídica gratuita e canais seguros de denúncia contra LGBTfobia.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <a href="https://allout.org/pt/" target="_blank" class="resource-link">→ All Out Brasil</a>
+                    <a href="https://todxs.org/" target="_blank" class="resource-link">→ TODXS</a>
+                    <a href="https://www.grupodignidade.org.br/" target="_blank" class="resource-link">→ Grupo Dignidade</a>
+                    <a href="https://esou.org/" target="_blank" class="resource-link">→ EternamenteSou</a>
+                    <a href="https://www.casadamaite.com/" target="_blank" class="resource-link">→ Casa da Maitê</a>
+                </div>
+            </div>
+            
+            <div class="resource-card reveal-hover-card">
+                <div class="resource-icon">Saúde 🏥</div>
+                <h3>SUS — Processo Transexualizador</h3>
+                <p>Hospitais credenciados que oferecem atendimento especializado pelo Sistema Único de Saúde, incluindo acompanhamento multidisciplinar e terapia hormonal.</p>
+                <a href="https://www.gov.br/pt-br/servicos/habilitar-se-para-realizar-processo-transexualizador" target="_blank" class="resource-link">→ Como acessar o SUS</a>
+            </div>
+
+            <div class="resource-card reveal-hover-card">
+                <div class="resource-icon">Carreira 💼</div>
+                <h3>TransEmpregos</h3>
+                <p>A maior plataforma de empregabilidade, vagas e capacitação profissional para pessoas trans no Brasil.</p>
+                <a href="https://www.transempregos.com.br" target="_blank" class="resource-link">→ TransEmpregos</a>
+            </div>
+        </section>
+
+        <!-- SECTION 4: SOMOS DIVERSIDADES -->
+        <section id="somos-diversidades" class="fade-in">
+            <h2>🌈 Somos Diversidades</h2>
+            <p>A <strong>Somos Diversidades</strong> é uma iniciativa dedicada a promover a inclusão, o respeito e a visibilidade da comunidade LGBTQIA+, conectando pessoas a recursos essenciais e redes de acolhimento.</p>
+            
+            <div class="resource-card reveal-hover-card">
+                <div class="resource-icon">Apoio ✨</div>
+                <h3>Conecte-se e Apoie</h3>
+                <p>Confira os canais oficiais e projetos parceiros que fazem a diferença na vida de milhares de pessoas diariamente.</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <a href="https://www.somosdiversidade.com.br/" target="_blank" class="resource-link">🌐 Site Oficial</a>
+                    <a href="https://www.instagram.com/casaflorescer1/" target="_blank" class="resource-link">📸 Casa Florescer</a>
+                    <a href="https://www.instagram.com/maesdaresistencia/" target="_blank" class="resource-link">✊ Mães da Resistência</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: INSPIRING PIONEERS -->
+        <section id="inspiracao" class="fade-in">
+            <h2>⭐ Pessoas Trans que Inspiram</h2>
+            
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Caitlyn Jenner</h3>
+                <p>Ex-atleta olímpica e personalidade da mídia americana. Sua transição pública em 2015 trouxe visibilidade sem precedentes para questões trans, ajudando a educar milhões sobre identidade de gênero.</p>
+                <a href="https://pt.wikipedia.org/wiki/Caitlyn_Jenner" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Buzz Bissinger</h3>
+                <p>Jornalista vencedor do Prêmio Pulitzer e autor americano. Após décadas de carreira, revelou publicamente sua identidade como pessoa trans, mostrando que nunca é tarde para viver de forma autêntica.</p>
+                <a href="https://en.wikipedia.org/wiki/Buzz_Bissinger" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Elliot Page</h3>
+                <p>Ator canadense indicado ao Oscar que se tornou uma das vozes masculinas trans mais influentes do cinema global. Seu ativismo e visibilidade inspiram milhões de jovens.</p>
+                <a href="https://pt.wikipedia.org/wiki/Elliot_Page" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Janet Mock</h3>
+                <p>Escritora, diretora e ativista americana. Autora de best-sellers do NY Times e produtora de séries marcantes como *Pose*, Janet é uma força na cultura pop e na inclusão racial e trans.</p>
+                <a href="https://pt.wikipedia.org/wiki/Janet_Mock" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Laverne Cox</h3>
+                <p>Atriz, produtora e ativista trans americana, indicada ao Emmy por *Orange is the New Black*, referência mundial de pioneirismo e empoderamento na televisão.</p>
+                <a href="https://pt.wikipedia.org/wiki/Laverne_Cox" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+            
+            <div class="person-card reveal-hover-card">
+                <div class="person-icon">🏳️‍⚧️</div>
+                <h3>Roberta Close</h3>
+                <p>Modelo e atriz que se tornou uma das maiores referências de beleza e visibilidade trans no Brasil desde a década de 1980, quebrando barreiras históricas.</p>
+                <a href="https://pt.wikipedia.org/wiki/Roberta_Close" target="_blank" class="person-link">Saiba mais →</a>
+            </div>
+        </section>
+
+        <!-- SECTION 6: CREATOR BLOCK (ALEXIA MELUSINE) -->
+        <section id="alexia" class="fade-in">
+            <h2>✨ Alexia Melusine</h2>
+            
+            <div class="alexia-section">
+                <div class="alexia-profile">
+                    <!-- Photo Container with Grayscale-to-Color Hover Effect -->
+                    <div class="alexia-photo reveal-hover-card">
+                        <img src="https://rbygxkbewzknvjjhxdvw.supabase.co/storage/v1/object/public/fotos-horiz/Xcard%20(6).png" alt="Alexia Melusine">
+                    </div>
+                    <div class="alexia-info">
+                        <div class="alexia-name">Alexia Melusine</div>
+                        <div class="alexia-title">Trans madura não-binária • Criadora de conteúdo • Alma ancestral</div>
+                        
+                        <p style="margin-bottom: 1rem;">Amante do horário e anti-horário, libriana ambígua e fluida. De uma outra época da qual a alma não envelhece, ligada espiritualmente às Pombagiras.</p>
+                        
+                        <div class="alexia-tags">
+                            <span class="alexia-tag">🏳️‍⚧️ Trans não-binária</span>
+                            <span class="alexia-tag">♎ Libra</span>
+                            <span class="alexia-tag">🌀 Fluida</span>
+                            <span class="alexia-tag">✨ Pombagiras</span>
+                        </div>
+                        
+                        <div class="alexia-links">
+                            <a href="https://github.com/pombagiras" target="_blank" class="alexia-link">GitHub Pombagiras</a>
+                            <a href="https://alexialuzdeferro.github.io/chamas-libriana/" target="_blank" class="alexia-link">Chamas Librianas</a>
+                            <a href="https://alexialuzdeferro.github.io/melusine_redes/" target="_blank" class="alexia-link">Melusine Redes</a>
+                            <a href="https://alexialuzdeferro.github.io/gotic-music/" target="_blank" class="alexia-link">Gótica Music</a>
+                            <a href="https://www.instagram.com/alexiamelusine/" target="_blank" class="alexia-link">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: SUPPORT AND LIKES (SUPABASE CONNECTION) -->
+        <section id="curtidas" class="like-section fade-in">
+            <h2>💖 Apoie nosso Portal</h2>
+            
+            <button class="like-btn" id="likeBtn">
+                ❤️ Demonstrar Meu Apoio
+            </button>
+            
+            <div style="margin: 1.5rem 0;">
+                <span class="like-count" id="likeCount">...</span>
+                <span style="font-size: 1.15rem; font-weight: 500;"> pessoas apoiaram esta página</span>
+            </div>
+            
+            <p class="like-message" id="likeMessage">Carregando apoio da comunidade trans...</p>
+            
+            <h3 style="margin-top: 2.5rem; margin-bottom: 1rem; font-family: var(--font-display); font-size: 1.3rem;">Compartilhe o Acolhimento:</h3>
+            
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://alexialuzdeferro.github.io/trans/" 
+                   target="_blank" class="share-btn facebook">
+                    Facebook
+                </a>
+                
+                <a href="https://t.me/share/url?url=https://alexialuzdeferro.github.io/trans/&text=Confira%20este%20portal%20incr%C3%ADvel%20para%20a%20comunidade%20LGBTQIA%2B%20🏳️‍🌈%20🏳️‍⚧️" 
+                   target="_blank" class="share-btn telegram">
+                    Telegram
+                </a>
+                
+                <a href="https://wa.me/?text=Confira%20este%20portal%20incr%C3%ADvel%20para%20a%20comunidade%20LGBTQIA%2B%20https://alexialuzdeferro.github.io/trans/" 
+                   target="_blank" class="share-btn whatsapp">
+                    WhatsApp
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- CELEBRATORY EMPOWERING FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-empower">
+                    Respeito é direito, diversidade é realidade! 🏳️‍⚧️ ✨
+                </p>
+                <p style="font-weight: 600; font-size: 0.95rem;">Portal Trans & LGBT+ — Criado com amor 💖 por Alexia Melusine</p>
+                <p style="margin-top: 0.25rem;">© 2026 Todos os direitos reservados</p>
+                <p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.75; font-style: italic;">
+                    Dica: Use os botões no topo para transitar entre os temas: Pride 🌈, Trans 🏳️‍⚧️ e Escuro 🌙
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Interactivity Javascript Bundle -->
+    <script src="script.js"></script>
+</body>
+</html>
